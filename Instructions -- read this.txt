@@ -1,0 +1,36 @@
+#########
+# NOTES #
+#########
+This is an optional addon package to Vocatus' PDQ Deploy packages on reddit.com/r/sysadmin
+This optional package was introduced in v8.0.
+
+This contains offline update packages that will bring the specified product (e.g. Windows 8.1) up to the patch level of the release date.
+
+If you'd like, it's easy to use the WSUS Offline Update tool to build your own offline update packages ( http://download.wsusoffline.net/ ).
+Really this "package" is just a wrapper tool I built to deploy the WSUS Offline packages silently through PDQ.
+
+
+################
+# INSTRUCTIONS #
+################
+0. You must be running at least version 3.1 release 3 (v3.1.3.0) of PDQ Deploy; perform a database upgrade if required.
+
+1. Edit the batch file 'wsus_offline_update_launcher.bat' and specify the full path to your updates folder (edit the REMOTE_REPOSITORY variable on or near line 59).
+   An example is already filled out for you, just update the variable to reflect the location of your server.
+   
+2. Import the .xml file(s) from the "\job files" directory into PDQ deploy.
+   You should see an additional folder in PDQ Deploy called "Microsoft Offline Updates"
+   (If there is an older version of the Microsoft Offline Updates folder in PDQ, delete it and re-import the latest .xml file)
+
+3. Copy everything from the "\repository" directory to wherever your repository is.
+
+4. Once the batch file knows where your server is, AND you've imported the latest PDQ job file, you can push the package
+   and it should run fine. Keep in mind that the offline update packages are BIG (generally >1 GB each) and it will take
+   a while to run. I see about 30 minutes on average per machine, and that's over a Gigabit connection. Just be patient.
+   You may want to tweak PDQ's timeout to be more relaxed also, so it doesn't prematurely kill the deployment.
+   
+See the attached screenshots for examples of what it should look like.
+
+Message me on reddit with any questions or problems, I usually reply pretty quickly.
+
+ -- vocatus

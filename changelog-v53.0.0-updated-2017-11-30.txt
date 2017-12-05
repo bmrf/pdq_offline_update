@@ -1,0 +1,233 @@
+#############
+# CHANGELOG #
+#############
+Legend:
+ * Addition    - Removal
+ ! Bug fix     * Update/improvement
+ . No change   / Change (non bug-fix)
+
+
+v53.0.0 // 2017-11-30
+ * Refresh all updates to current date
+
+v49.0.0 // 2017-09-18
+ * Refresh all updates to current date
+
+v48.0.1 // 2017-02-06
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.9.1
+
+v48.0.0 // 2017-02-02
+ * Refresh all updates to current date
+ / Switch to standard SEMVER versioning
+
+v47.0 // 2017-10-11
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.9.0
+
+v46.0 // 2016-12-29
+ * Refresh all updates to current date
+
+v45.0 // 2016-12-05
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.8.1
+
+v44.0 // 2016-11-08
+ * Refresh all updates to current date
+
+v43.0 // 2016-09-29
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.8.0
+
+v42.0 // 2016-09-03
+ * Refresh all updates to current date
+
+v41.0 // 2016-04-17
+ * Refresh all updates to current date
+
+v40.0 // 2016-03-23
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.6.1
+
+v39.0 // 2016-03-10
+ + Add missing job information for Windows 10 / Server 2016 R2 in PDQ job file
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.5.0
+
+v38.0 // 2016-01-24
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.2.2
+
+v37.0 // 2016-01-07
+ * Refresh all updates to current date
+
+v36.0 // 2015-11-18
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.2.1
+
+v35.1 // 2015-10-21
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.1.0
+
+v35.0 // 2015-09-15
+ ! Bonus release, BT Sync only
+ + Add Windows 10 and Server 2016
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.0.2
+
+v34.0 // 2015-08-28
+ ! Last release
+ * Refresh all updates to current date
+ * Update WSUS Offline to v10.0
+
+v33.0 // 2015-07-18
+ ! Last release
+ * Refresh all updates to current date
+
+v32.0 // 2015-06-03
+ * Refresh all updates to current date
+
+v31.0 // 2015-04-29
+ * Refresh all updates to current date
+
+v29.0 // 2015-03-11
+ * Refresh all updates to current date
+ / Change underlying folder structure; remove sub-folder with the date in the name since we always want the latest patch set anyway
+
+v28.0 // 2015-02-10
+ * Refresh all updates to current date
+
+v27.0 // 2015-01-14
+ * Refresh all updates to current date
+ * Update WSUS Offline core to v9.5.1
+
+v26.0 // 2014-12-17
+ * Refresh all updates to current date
+ * Update WSUS Offline core to v9.5
+
+v25.0 // 2014-11-17
+ * Refresh all updates to current date
+
+v24.0 // 2014-10-14
+ * Refresh all updates to current date
+
+v23.1 // 2014-10-03
+ * Refresh all updates to current date
+
+v23.0 // 2014-09-19
+ * Refresh all updates to current date
+
+v22.1 // 2014-09-10
+ * Refresh all updates to current date
+ * Update WSUS Offline core to v9.4
+
+v21.3 // 2014-08-30
+ * Refresh all updates to current date to catch critical Win6.x security patch
+ * Update 'Instructions - specify your server.png' to reflect new REMOTE_REPOSITORY location
+ * Update 'Instructions -- read this.txt'
+ - Removed 'Instructions - specify the package name and date in PDQ.png' since we don't manually update the PDQ job file any more, we just delete it and re-import it
+
+v21.2 // 2014-08-19
+ / Fixed out of date microsoft_offline_updates.xml file (referred to 2014-08-12 instead of 2014-08-18)
+
+v21.1 // 2014-08-18
+ * Refresh all updates to current date
+ * Added updates for Office 2013 (thanks to reddit.com/user/beardedllamadotnet for suggestion)
+
+v21.0 // 2014-08-13
+ * Refresh all updates to current date
+ * Improvements microsoft_offline_update_launcher.bat
+
+v20.0 // 2014-07-25
+ * Refresh all updates to current date
+ * microsoft_offline_update_launcher.bat - Update to v1.5
+
+v19.1 // 2014-07-18
+ * Refresh all updates to current date
+
+v19.0 // 2014-07-08
+ * Refresh all updates to 2014-07-08 (Patch Tuesday)
+
+v18.0 // 2014-06-10
+ * Refresh all updates to current date
+ - Removed Windows XP due to Microsoft End-of-Life
+
+v17.0 // 2014-05-13
+ * Refresh all updates to current date
+
+v16.0 // 2014-04-08
+ * Refresh all updates to current date
+ * Update PDQ Deploy job file to v3.1.3.0
+ - NOTE: Today is end-of-life for Windows XP. After this date Microsoft will not release any new security patches or fixes for Windows XP.
+         I will remove Windows XP updates from the PDQ packages in a couple of releases. If you still need them you can contact me directly (PM)
+		 on Reddit.
+
+v15.0 // 2014-03-24
+ * Refresh all updates to current date
+ * Update PDQ Deploy job file to v3.1.1.0
+
+v14.0 // 2014-02-20
+ * Refresh all updates to current date
+
+v13.4.1 // 2014-02-12
+ * Refresh all updates to current date for Patch Tuesday
+
+v13.4 // 2014-01-30
+ * Refresh all updates to current date
+ * Minor code cleanup in 'microsoft_offline_update_launcher.bat'
+
+v13.3 // 2014-01-15
+ * Refresh all updates to current date
+
+v13.2 // 2014-01-17
+ * Refresh all updates to current date
+ * Testing new automated deployment mechanism on the server
+   This won't have any noticable effect on the user-side, but
+   allows us to pull down and push updates faster (less manual
+   steps required).
+
+v13.1 // 2014-01-15
+ * Refresh all updates to current date
+ * Upgraded WSUS Offline from v8.8 to v8.9
+
+v13.0 // 2014-01-06
+ * Refresh all updates to current date
+ * Upgraded job file to PDQ Deploy v3.0.3.0
+
+v12.0 // 2013-12-11
+ * Refresh all updates to current date
+
+v11.2 // 2013-11-21
+ * Refresh all updates to current date
+
+v11.1 // 2013-11-14
+ * Refresh all updates to current date for Patch Tuesday
+ * Added updates for Windows 6.3 (Windows 8.1 and Server 2012 R2)
+
+v11.0 // 2013-10-31
+ * Refresh all updates to current date
+
+v10.2 // 2013-10-17
+ / Update version number to stay in sync with main PDQ Packages
+
+v10.1 // 2013-10-16
+ / Changelogs are now signed with my PGP key to verify authenticity
+ * Refresh all updates to current date
+
+v10.0 // 2013-10-04
+ * Refresh all updates to current date
+ - Stopped providing 7-Zip packages for this repository, simply because it's so large
+
+v9.1 // 2013-09-25
+ * Refresh all updates to current date
+ / Moved onto protected array (unRAID)
+ * Pushed to BitTorrent Sync
+
+v9.0 // 2013-09-11
+ * Refresh all updates to current date
+ * Added last refresh date to PDQ's new "Version" field
+ * Pushed to BitTorrent Sync
+ * Posted to Reddit.com/r/sysadmin
+
+v8.1 // 2013-09-02
+ / Changed all jobs to accept deployment only to their target operating system (e.g. you cannot push the Windows XP patch package to a Windows 8 machine)
