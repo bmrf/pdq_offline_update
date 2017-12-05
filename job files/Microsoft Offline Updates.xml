@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AdminArsenal.Export Code="PDQDeploy" Name="PDQ Deploy" Version="5.1.0.0" MinimumVersion="3.1">
+  <Folder>
+    <Created>2016-04-17T06:52:04.0000000-07:00</Created>
+    <Id value="2" />
+    <Modified>2016-04-17T06:52:04.0000000-07:00</Modified>
+    <Name>Microsoft Offline Updates</Name>
+    <ParentId value="null" />
+    <Path>Microsoft Offline Updates</Path>
+    <FolderDisplaySettings name="DisplaySettings">
+      <DisplayType>Normal</DisplayType>
+      <IconKey></IconKey>
+      <SortOrder value="6" />
+    </FolderDisplaySettings>
+    <Children type="list">
+      <Package>
+        <Description>Installs updates for Microsoft Office 2007, 2010, and 2013, current to the stated date.
+ - Usually requires a reboot, but does not FORCE one *
+ - This installer calls the batch file "microsoft_offline_update_launcher.bat" and passes it two arguments: product name and date. Arguments are separated by a space.
+
+    Example: 
+      microsoft_offline_update_launcher.bat windows_7_and_server_2008-R2 2013-07-29
+
+   If either of the variables is missing, are out of order, or that specific package and date don't exist, it will fail and return exit code 1. 
+
+ - Edit the batch file 'microsoft_offline_update_launcher.bat' and read the instructions on how to set it up.
+ - The batch file is a workaround wrapper for the WSUS offline update packages, which were having trouble installing silently on their own
+
+ * Reboot requirement can be toggled in this file:
+$(Repository)\microsoft_offline_updates\&lt;PRODUCT_NAME&gt;\&lt;DATE&gt;\UpdateInstaller.ini</Description>
+        <FolderId value="2" />
+        <Name>Office 2007/2010/2013 (2016-04-17)</Name>
+        <Path>Microsoft Offline Updates\Office 2007/2010/2013 (2016-04-17)</Path>
+        <Version>2016-04-17</Version>
+        <PackageDefinition name="Definition">
+          <CopyMode>Default</CopyMode>
+          <InventoryScanProfileId value="null" />
+          <RunAs value="null" />
+          <ScanAfterDeployment value="null" />
+          <Timeout value="60" />
+          <UseCustomTimeout value="false" />
+          <Steps type="list">
+            <InstallStep>
+              <CustomCommandLine></CustomCommandLine>
+              <FileName>$(Repository)\microsoft_offline_updates\microsoft_offline_update_launcher.bat</FileName>
+              <Files></Files>
+              <IncludeDirectory value="false" />
+              <MsiOperation>Install</MsiOperation>
+              <MsiQuiet value="true" />
+              <MsiRestart>Never</MsiRestart>
+              <Parameters>office_2k7-2k13 2016-04-17</Parameters>
+              <SuccessCodes>0,1641,3010</SuccessCodes>
+              <RunAs value="null" />
+              <ErrorMode>StopDeploymentFail</ErrorMode>
+              <IsEnabled value="true" />
+              <Title></Title>
+              <TypeName>Install</TypeName>
+              <Conditions type="list">
+                <PackageStepCondition>
+                  <Architecture>Both</Architecture>
+                  <Version>All</Version>
+                  <TypeName>OperatingSystem</TypeName>
+                </PackageStepCondition>
+                <PackageStepCondition>
+                  <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+                  <TypeName>LoggedOnUser</TypeName>
+                </PackageStepCondition>
+              </Conditions>
+            </InstallStep>
+          </Steps>
+        </PackageDefinition>
+        <PackageDisplaySettings name="DisplaySettings">
+          <DisplayType>Normal</DisplayType>
+          <IconKey></IconKey>
+          <SortOrder value="6" />
+        </PackageDisplaySettings>
+      </Package>
+      <Package>
+        <Description>Installs Windows 10 and Server 2016 R2 updates, current to the stated date.
+ - Usually requires a reboot, but does not FORCE one *
+ - This installer calls the batch file "microsoft_offline_update_launcher.bat" and passes it two arguments: product name and date. Arguments are separated by a space.
+
+    Example: 
+      microsoft_offline_update_launcher.bat windows_xp 2013-07-29
+
+   If either of the variables is missing, are out of order, or that specific package and date don't exist, it will fail and return exit code 1. 
+
+ - Edit the batch file 'microsoft_offline_update_launcher.bat' and read the instructions on how to set it up.
+ - The batch file is a workaround wrapper for the WSUS offline update packages, which were having trouble installing silently on their own
+
+ * Reboot requirement can be toggled in this file:
+$(Repository)\microsoft_offline_updates\&lt;PRODUCT_NAME&gt;\&lt;DATE&gt;\UpdateInstaller.ini</Description>
+        <FolderId value="2" />
+        <Name>Windows 10/Server 2016 R2 (2016-04-17)</Name>
+        <Path>Microsoft Offline Updates\Windows 10/Server 2016 R2 (2016-04-17)</Path>
+        <Version>2016-04-17</Version>
+        <PackageDefinition name="Definition">
+          <CopyMode>Default</CopyMode>
+          <InventoryScanProfileId value="null" />
+          <RunAs value="null" />
+          <ScanAfterDeployment value="null" />
+          <Timeout value="60" />
+          <UseCustomTimeout value="false" />
+          <Steps type="list">
+            <InstallStep>
+              <CustomCommandLine></CustomCommandLine>
+              <FileName>$(Repository)\microsoft_offline_updates\microsoft_offline_update_launcher.bat</FileName>
+              <Files></Files>
+              <IncludeDirectory value="false" />
+              <MsiOperation>Install</MsiOperation>
+              <MsiQuiet value="true" />
+              <MsiRestart>Never</MsiRestart>
+              <Parameters>windows_10_and_server_2016 2016-04-17</Parameters>
+              <SuccessCodes>0,1641,3010</SuccessCodes>
+              <RunAs value="null" />
+              <ErrorMode>StopDeploymentFail</ErrorMode>
+              <IsEnabled value="true" />
+              <Title></Title>
+              <TypeName>Install</TypeName>
+              <Conditions type="list">
+                <PackageStepCondition>
+                  <Architecture>Both</Architecture>
+                  <Version>Windows81, Server2012R2</Version>
+                  <TypeName>OperatingSystem</TypeName>
+                </PackageStepCondition>
+                <PackageStepCondition>
+                  <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+                  <TypeName>LoggedOnUser</TypeName>
+                </PackageStepCondition>
+              </Conditions>
+            </InstallStep>
+          </Steps>
+        </PackageDefinition>
+        <PackageDisplaySettings name="DisplaySettings">
+          <DisplayType>Normal</DisplayType>
+          <IconKey></IconKey>
+          <SortOrder value="6" />
+        </PackageDisplaySettings>
+      </Package>
+      <Package>
+        <Description>Installs Windows 7/Server 2008 R2 updates, current to the stated date.
+ - Usually requires a reboot, but does not FORCE one *
+ - This installer calls the batch file "microsoft_offline_update_launcher.bat" and passes it two arguments: product name and date. Arguments are separated by a space.
+
+    Example: 
+      microsoft_offline_update_launcher.bat Windows 7/Server 2008 R2 2013-07-29
+
+   If either of the variables is missing, are out of order, or that specific package and date don't exist, it will fail and return exit code 1. 
+
+ - Edit the batch file 'microsoft_offline_update_launcher.bat' and read the instructions on how to set it up.
+ - The batch file is a workaround wrapper for the WSUS offline update packages, which were having trouble installing silently on their own
+
+ * Reboot requirement can be toggled in this file:
+$(Repository)\microsoft_offline_updates\&lt;PRODUCT_NAME&gt;\&lt;DATE&gt;\UpdateInstaller.ini</Description>
+        <FolderId value="2" />
+        <Name>Windows 7/Server 2008 R2 (2016-04-17)</Name>
+        <Path>Microsoft Offline Updates\Windows 7/Server 2008 R2 (2016-04-17)</Path>
+        <Version>2016-04-17</Version>
+        <PackageDefinition name="Definition">
+          <CopyMode>Default</CopyMode>
+          <InventoryScanProfileId value="null" />
+          <RunAs value="null" />
+          <ScanAfterDeployment value="null" />
+          <Timeout value="60" />
+          <UseCustomTimeout value="false" />
+          <Steps type="list">
+            <InstallStep>
+              <CustomCommandLine></CustomCommandLine>
+              <FileName>$(Repository)\microsoft_offline_updates\microsoft_offline_update_launcher.bat</FileName>
+              <Files></Files>
+              <IncludeDirectory value="false" />
+              <MsiOperation>Install</MsiOperation>
+              <MsiQuiet value="true" />
+              <MsiRestart>Never</MsiRestart>
+              <Parameters>windows_7_and_server_2008-R2 2016-04-17</Parameters>
+              <SuccessCodes>0,1641,3010</SuccessCodes>
+              <RunAs value="null" />
+              <ErrorMode>StopDeploymentFail</ErrorMode>
+              <IsEnabled value="true" />
+              <Title></Title>
+              <TypeName>Install</TypeName>
+              <Conditions type="list">
+                <PackageStepCondition>
+                  <Architecture>Both</Architecture>
+                  <Version>Windows7, Server2008R2</Version>
+                  <TypeName>OperatingSystem</TypeName>
+                </PackageStepCondition>
+                <PackageStepCondition>
+                  <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+                  <TypeName>LoggedOnUser</TypeName>
+                </PackageStepCondition>
+              </Conditions>
+            </InstallStep>
+          </Steps>
+        </PackageDefinition>
+        <PackageDisplaySettings name="DisplaySettings">
+          <DisplayType>Normal</DisplayType>
+          <IconKey></IconKey>
+          <SortOrder value="6" />
+        </PackageDisplaySettings>
+      </Package>
+      <Package>
+        <Description>Installs Windows XP updates, current to the stated date.
+ - Usually requires a reboot, but does not FORCE one *
+ - This installer calls the batch file "microsoft_offline_update_launcher.bat" and passes it two arguments: product name and date. Arguments are separated by a space.
+
+    Example: 
+      microsoft_offline_update_launcher.bat windows_xp 2013-07-29
+
+   If either of the variables is missing, are out of order, or that specific package and date don't exist, it will fail and return exit code 1. 
+
+ - Edit the batch file 'microsoft_offline_update_launcher.bat' and read the instructions on how to set it up.
+ - The batch file is a workaround wrapper for the WSUS offline update packages, which were having trouble installing silently on their own
+
+ * Reboot requirement can be toggled in this file:
+$(Repository)\microsoft_offline_updates\&lt;PRODUCT_NAME&gt;\&lt;DATE&gt;\UpdateInstaller.ini</Description>
+        <FolderId value="2" />
+        <Name>Windows 8.1/Server 2012 R2 (2016-04-17)</Name>
+        <Path>Microsoft Offline Updates\Windows 8.1/Server 2012 R2 (2016-04-17)</Path>
+        <Version>2016-04-17</Version>
+        <PackageDefinition name="Definition">
+          <CopyMode>Default</CopyMode>
+          <InventoryScanProfileId value="null" />
+          <RunAs value="null" />
+          <ScanAfterDeployment value="null" />
+          <Timeout value="60" />
+          <UseCustomTimeout value="false" />
+          <Steps type="list">
+            <InstallStep>
+              <CustomCommandLine></CustomCommandLine>
+              <FileName>$(Repository)\microsoft_offline_updates\microsoft_offline_update_launcher.bat</FileName>
+              <Files></Files>
+              <IncludeDirectory value="false" />
+              <MsiOperation>Install</MsiOperation>
+              <MsiQuiet value="true" />
+              <MsiRestart>Never</MsiRestart>
+              <Parameters>windows_8.1_and_server_2012-R2 2016-04-17</Parameters>
+              <SuccessCodes>0,1641,3010</SuccessCodes>
+              <RunAs value="null" />
+              <ErrorMode>StopDeploymentFail</ErrorMode>
+              <IsEnabled value="true" />
+              <Title></Title>
+              <TypeName>Install</TypeName>
+              <Conditions type="list">
+                <PackageStepCondition>
+                  <Architecture>Both</Architecture>
+                  <Version>Windows81, Server2012R2</Version>
+                  <TypeName>OperatingSystem</TypeName>
+                </PackageStepCondition>
+                <PackageStepCondition>
+                  <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+                  <TypeName>LoggedOnUser</TypeName>
+                </PackageStepCondition>
+              </Conditions>
+            </InstallStep>
+          </Steps>
+        </PackageDefinition>
+        <PackageDisplaySettings name="DisplaySettings">
+          <DisplayType>Normal</DisplayType>
+          <IconKey></IconKey>
+          <SortOrder value="6" />
+        </PackageDisplaySettings>
+      </Package>
+      <Package>
+        <Description>Installs Windows Server 2003 updates, current to the stated date.
+ - Usually requires a reboot, but does not FORCE one *
+ - This installer calls the batch file "microsoft_offline_update_launcher.bat" and passes it two arguments: product name and date. Arguments are separated by a space.
+
+    Example: 
+      microsoft_offline_update_launcher.bat windows_server_2003 2013-07-29
+
+   If either of the variables is missing, are out of order, or that specific package and date don't exist, it will fail and return exit code 1. 
+
+ - Edit the batch file 'microsoft_offline_update_launcher.bat' and read the instructions on how to set it up.
+ - The batch file is a workaround wrapper for the WSUS offline update packages, which were having trouble installing silently on their own
+
+ * Reboot requirement can be toggled in this file:
+$(Repository)\microsoft_offline_updates\&lt;PRODUCT_NAME&gt;\&lt;DATE&gt;\UpdateInstaller.ini</Description>
+        <FolderId value="2" />
+        <Name>Windows Server 2003 (2016-04-17)</Name>
+        <Path>Microsoft Offline Updates\Windows Server 2003 (2016-04-17)</Path>
+        <Version>2016-04-17</Version>
+        <PackageDefinition name="Definition">
+          <CopyMode>Default</CopyMode>
+          <InventoryScanProfileId value="null" />
+          <RunAs value="null" />
+          <ScanAfterDeployment value="null" />
+          <Timeout value="60" />
+          <UseCustomTimeout value="false" />
+          <Steps type="list">
+            <InstallStep>
+              <CustomCommandLine></CustomCommandLine>
+              <FileName>$(Repository)\microsoft_offline_updates\microsoft_offline_update_launcher.bat</FileName>
+              <Files></Files>
+              <IncludeDirectory value="false" />
+              <MsiOperation>Install</MsiOperation>
+              <MsiQuiet value="true" />
+              <MsiRestart>Never</MsiRestart>
+              <Parameters>windows_server_2003 2016-04-17</Parameters>
+              <SuccessCodes>0,1641,3010</SuccessCodes>
+              <RunAs value="null" />
+              <ErrorMode>StopDeploymentFail</ErrorMode>
+              <IsEnabled value="true" />
+              <Title></Title>
+              <TypeName>Install</TypeName>
+              <Conditions type="list">
+                <PackageStepCondition>
+                  <Architecture>Both</Architecture>
+                  <Version>Server2003</Version>
+                  <TypeName>OperatingSystem</TypeName>
+                </PackageStepCondition>
+                <PackageStepCondition>
+                  <IsUserLoggedOn>AlwaysRun</IsUserLoggedOn>
+                  <TypeName>LoggedOnUser</TypeName>
+                </PackageStepCondition>
+              </Conditions>
+            </InstallStep>
+          </Steps>
+        </PackageDefinition>
+        <PackageDisplaySettings name="DisplaySettings">
+          <DisplayType>Normal</DisplayType>
+          <IconKey></IconKey>
+          <SortOrder value="6" />
+        </PackageDisplaySettings>
+      </Package>
+    </Children>
+  </Folder>
+</AdminArsenal.Export>
